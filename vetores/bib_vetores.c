@@ -3,57 +3,49 @@
 #include <time.h>
 #include "bib_vetores.h"
 
-// 
-void gerar_valor_vet_int(int tamanho, int vetor[], int valor_minimo, int valor_limite) {
+// fills a vector with random integers in especific range
+void fill_vect_rand_int(int size, int vector[], int min, int max) {
 
-    srand(time(NULL));
+    for(int i = 0; i < size; i++) {
 
+        int random = min + rand() % (max - min);
 
- for(int i = 0; i < tamanho; tamanho ++) {
-
-        int aleatório = valor_minimo + rand() % (valor_limite - valor_minimo);
-
-        vetor[tamanho] = aleatório;
-        
-        
-
+        vector[i] = random;
+            
     }
-
 }
 
-int aleatorio_inteiro(int max, int min)
+//generates a random integer in espedific range
+int rand_int(int max, int min)
 {
 
-    int num_aleatorio;
+    int random_num;
 
-    num_aleatorio = min + rand() % max;
+    random_num = min + rand() % max;
 
-    return num_aleatorio;
+    return random_num;
 }
 
-void preencher_vetor_inteiro(int tamanho, int vetor[], int valor_inteiro)
+//fills a vector with a single especified integer value
+void fill_vect_int(int size, int vector[], int n)
 {
 
-    for (int i = 0; i < tamanho; tamanho++)
-    {
+    for (int i = 0; i < size; i++) {
 
-        vetor[tamanho] = valor_inteiro;
+        vector[i] = n;
+
     }
 }
 
-void exibir_vetor_inteiro(int tamanho, int vetor[]) { 
+//exibits the values of an integer vector
+void exib_vect_int(int size, int vector[]) { 
 
-    for (int i = 0; i < tamanho; i++) {
+    for (int i = 0; i < size; i++) {
 
-        printf("%d", vetor[i]);
+        printf("%d ", vector[i]);
 
     }
 
 }
 
-void multiplicar_vetores(int tamanho, int a[], int b[]) {
-
-    
-
-
-} 
+void multipli_vect(int size, int vect1[], int vect2[]) {} 
